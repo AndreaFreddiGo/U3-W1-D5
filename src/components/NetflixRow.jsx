@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { Row } from 'react-bootstrap'
+import SingleMovie from './SingleMovie'
 
 class NetflixRow extends Component {
   state = {
@@ -17,9 +18,9 @@ class NetflixRow extends Component {
         }
       })
 
-      .then((movies) => {
-        console.log(movies.Search)
-        this.setState({ movies: movies.Search })
+      .then((arrayOfMovies) => {
+        console.log(arrayOfMovies.Search)
+        this.setState({ movies: arrayOfMovies.Search })
       })
 
       .catch((err) => {
@@ -37,70 +38,12 @@ class NetflixRow extends Component {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="row m-2">
-              <div className="col-6 col-md-3 col-lg-2 px-1">
-                <img
-                  src="./assets/images/media/media0.webp"
-                  className="w-100"
-                />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 px-1">
-                <img src="./assets/images/media/media1.jpg" className="w-100" />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 d-none d-md-block px-1">
-                <img
-                  src="./assets/images/media/media2.webp"
-                  className="w-100"
-                />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 d-none d-md-block px-1">
-                <img
-                  src="./assets/images/media/media3.webp"
-                  className="w-100"
-                />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 d-none d-lg-block px-1">
-                <img src="./assets/images/media/media4.jpg" className="w-100" />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 d-none d-lg-block px-1">
-                <img
-                  src="./assets/images/media/media5.webp"
-                  className="w-100"
-                />
-              </div>
+              <SingleMovie array={this.state.movies.slice(0, 6)} />
             </div>
           </div>
           <div className="carousel-item">
             <div className="row m-2">
-              <div className="col-6 col-md-3 col-lg-2 px-1">
-                <img src="./assets/images/media/media6.jpg" className="w-100" />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 px-1">
-                <img
-                  src="./assets/images/media/media7.webp"
-                  className="w-100"
-                />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 d-none d-md-block px-1">
-                <img
-                  src="./assets/images/media/media8.webp"
-                  className="w-100"
-                />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 d-none d-md-block px-1">
-                <img src="./assets/images/media/media9.jpg" className="w-100" />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 d-none d-lg-block px-1">
-                <img
-                  src="./assets/images/media/media10.jpg"
-                  className="w-100"
-                />
-              </div>
-              <div className="col-6 col-md-3 col-lg-2 d-none d-lg-block px-1">
-                <img
-                  src="./assets/images/media/media11.jpg"
-                  className="w-100"
-                />
-              </div>
+              <SingleMovie array={this.state.movies.slice(-6)} />
             </div>
           </div>
         </div>
