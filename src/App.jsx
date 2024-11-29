@@ -10,7 +10,7 @@ import NetflixRow from './components/NetflixRow'
 
 function App() {
   return (
-    <div className=" bg-darkest vh-100">
+    <div className=" bg-darkest">
       <header>
         <NetflixNavbar />
       </header>

@@ -9,7 +9,7 @@ class NetflixRow extends Component {
 
   // creo la funzione di fetch per il recupero dei film
   getMovies = () => {
-    fetch('http://www.omdbapi.com/?i=tt3896198&apikey=c286f1c6&s=Breaking Bad')
+    fetch('http://www.omdbapi.com/?i=tt3896198&apikey=c286f1c6&s=Star Wars')
       .then((response) => {
         if (response.ok) {
           return response.json()
