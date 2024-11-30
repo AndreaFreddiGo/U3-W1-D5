@@ -1,52 +1,20 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './assets/styles/netflix.css'
 import './assets/styles/custom-bootstrap.css'
-import { Container, Row, Col } from 'react-bootstrap'
-import NetflixFooter from './components/NetflixFooter'
-import NetflixNavbar from './components/NetflixNavbar'
-import NetflixMenu from './components/NetflixMenu'
-import NetflixRow from './components/NetflixRow'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import Homepage from './pages/Homepage'
+import Profile from './pages/Profile'
+import Settings from './pages/Settings'
 
 function App() {
   return (
-    <div className=" bg-darkest">
-      <header>
-        <NetflixNavbar />
-      </header>
-      <main>
-        <Container>
-          <NetflixMenu />
-          <Row>
-            <Col className="col-12 mt-2 mx-0">
-              <div>
-                <p className="text-light fs-6 fw-semibold">Trending Now</p>
-              </div>
-            </Col>
-          </Row>
-          <NetflixRow />
-          <Row>
-            <Col className="col-12 mt-2 mx-0">
-              <div>
-                <p className="text-light fs-6 fw-semibold">Trending Now</p>
-              </div>
-            </Col>
-          </Row>
-          <NetflixRow />
-          <Row>
-            <Col className="col-12 mt-2 mx-0">
-              <div>
-                <p className="text-light fs-6 fw-semibold">Trending Now</p>
-              </div>
-            </Col>
-          </Row>
-          <NetflixRow />
-        </Container>
-      </main>
-      <footer>
-        <NetflixFooter />
-      </footer>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Settings" element={<Settings />} />
+      </Routes>
+    </Router>
   )
 }
 

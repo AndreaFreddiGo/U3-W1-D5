@@ -1,0 +1,34 @@
+body nav {
+  background: linear-gradient(180deg, #000000 25%, #141414 75%);
+  height: 90px;
+}
+body nav img {
+  height: 60px;
+}
+body main img {
+  height: 255px;
+  width: 255px;
+}
+@media screen and (min-width: 992px) {
+  body main img {
+    height: 140px;
+    width: 140px;
+  }
+}
+body main .title {
+  font-size: 4rem;
+}
+body main input::-moz-placeholder {
+  color: white;
+}
+body main input::placeholder {
+  color: white;
+}
+
+label {
+  font-size: 0.8rem;
+}
+
+.show-title {
+  font-size: 0.9rem;
+}/*# sourceMappingURL=profile.css.map */

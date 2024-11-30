@@ -2,14 +2,14 @@ import { Component } from 'react'
 import { Row } from 'react-bootstrap'
 import SingleMovie from './SingleMovie'
 
-class NetflixRow extends Component {
+class NetflixRow1 extends Component {
   state = {
     movies: [],
   }
 
   // creo la funzione di fetch per il recupero dei film
   getMovies = () => {
-    fetch('http://www.omdbapi.com/?i=tt3896198&apikey=c286f1c6&s=Star Wars')
+    fetch('http://www.omdbapi.com/?i=tt3896198&apikey=c286f1c6&s=Harry Potter')
       .then((response) => {
         if (response.ok) {
           return response.json()
@@ -76,4 +76,4 @@ class NetflixRow extends Component {
   }
 }
 
-export default NetflixRow
+export default NetflixRow1
