@@ -1,7 +1,8 @@
-nav img {
+img {
   height: 35px;
 }
-nav .custom-dropdown {
+
+.custom-dropdown {
   transform: translate(-100px);
 }
 

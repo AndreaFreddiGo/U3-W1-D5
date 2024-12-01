@@ -4,7 +4,7 @@ import NetflixNavbar from '../components/NetflixNavbar'
 
 const Settings = () => {
   return (
-    <body>
+    <div>
       <header>
         <NetflixNavbar />
       </header>
@@ -187,7 +187,7 @@ const Settings = () => {
           </div>
         </div>
       </main>
-    </body>
+    </div>
   )
 }
 

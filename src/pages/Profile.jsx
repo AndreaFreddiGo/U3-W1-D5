@@ -4,11 +4,11 @@ import NetflixNavbar from '../components/NetflixNavbar'
 
 const Profile = () => {
   return (
-    <body>
+    <div className="bg-darkest vh-100">
       <header>
         <NetflixNavbar />
       </header>
-      <main className="pt-5 pb-2 h-100 bg-darkest">
+      <main className="pt-5 pb-2 bg-darkest">
         <div>
           <div className="container">
             <div className="row">
@@ -139,7 +139,7 @@ const Profile = () => {
           </div>
         </footer>
       </main>
-    </body>
+    </div>
   )
 }
 

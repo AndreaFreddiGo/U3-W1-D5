@@ -1,13 +1,12 @@
 // creo un file scss per gestire alcuni stili che specifici che non posso controllare direttamente in HTML con Bootstrap
 
-nav {
-  img {
-    height: 35px;
-  }
-  .custom-dropdown {
-    transform: translate(-100px);
-  }
+img {
+  height: 35px;
 }
+.custom-dropdown {
+  transform: translate(-100px);
+}
+
 main {
   i,
   button,

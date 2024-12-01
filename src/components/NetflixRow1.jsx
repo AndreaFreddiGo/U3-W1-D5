@@ -1,10 +1,11 @@
 import { Component } from 'react'
-import { Row } from 'react-bootstrap'
+import { Row, Spinner } from 'react-bootstrap'
 import SingleMovie from './SingleMovie'
 
 class NetflixRow1 extends Component {
   state = {
     movies: [],
+    isLoading: true,
   }
 
   // creo la funzione di fetch per il recupero dei film
@@ -20,11 +21,14 @@ class NetflixRow1 extends Component {
 
       .then((arrayOfMovies) => {
         console.log(arrayOfMovies.Search)
-        this.setState({ movies: arrayOfMovies.Search })
+        this.setState({ movies: arrayOfMovies.Search, isLoading: false })
       })
 
       .catch((err) => {
         console.log(err)
+        this.setState({
+          isLoading: false,
+        })
       })
   }
 
@@ -38,6 +42,14 @@ class NetflixRow1 extends Component {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="row m-2">
+              {this.state.isLoading && (
+                <Spinner
+                  className=" mx-auto"
+                  animation="border"
+                  role="status"
+                  variant="danger"
+                ></Spinner>
+              )}
               <SingleMovie array={this.state.movies.slice(0, 6)} />
             </div>
           </div>

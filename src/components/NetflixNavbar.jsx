@@ -2,19 +2,20 @@ import netflixLogo from '../assets/images/netflix_logo.png'
 import avatar from '../assets/images/my-avatar.jpg'
 import kidsIcon from '../assets/images/kids_icon.png'
 import { Link } from 'react-router-dom'
+import { Nav } from 'react-bootstrap'
 
 const NetflixNavbar = () => {
   return (
     <div className="container">
       <div className="row">
-        <nav
+        <Nav
           className="navbar navbar-expand-lg bg-darkest fixed-top px-1"
           data-bs-theme="dark"
         >
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <Link to="/" className="navbar-brand">
               <img id="netflixLogo" src={netflixLogo} alt="logo" />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -97,7 +98,7 @@ const NetflixNavbar = () => {
               </div>
             </div>
           </div>
-        </nav>
+        </Nav>
       </div>
     </div>
   )
