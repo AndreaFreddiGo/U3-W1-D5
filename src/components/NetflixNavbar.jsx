@@ -1,6 +1,7 @@
 import netflixLogo from '../assets/images/netflix_logo.png'
 import avatar from '../assets/images/my-avatar.jpg'
 import kidsIcon from '../assets/images/kids_icon.png'
+import { Link } from 'react-router-dom'
 
 const NetflixNavbar = () => {
   return (
@@ -77,25 +78,19 @@ const NetflixNavbar = () => {
                   </button>
                   <ul className="dropdown-menu custom-dropdown">
                     <li>
-                      <a
-                        className="dropdown-item"
-                        href="./netflix-profile.html"
-                      >
+                      <Link to="/" className="dropdown-item">
+                        Homepage
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/Profile" className="dropdown-item">
                         Profile
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        className="dropdown-item"
-                        href="./netflix-settings.html"
-                      >
+                      <Link to="/Settings" className="dropdown-item">
                         Settings
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Log out
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
